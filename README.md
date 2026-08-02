@@ -1,0 +1,94 @@
+# Painter3000 — AMD ROCm / RDNA4 Porting Work
+
+I work on practical AMD GPU enablement for 3D AI, differentiable rendering, Gaussian splatting, neural graphics, and reconstruction pipelines.
+
+Main target stack:
+
+- AMD Radeon AI PRO R9700 / RDNA4 / gfx1201
+- ROCm 7.2
+- Python 3.12
+- PyTorch ROCm builds
+- Linux-based local AI / 3D workflows
+
+---
+
+## AMD ROCm / RDNA4 Ports
+
+### Differentiable Rendering
+
+- [`amd-nvdiffrast-rocm72-gfx1201`](https://github.com/Painter3000/amd-nvdiffrast-rocm72-gfx1201)  
+  AMD ROCm 7.2 / RDNA4 / gfx1201 patch and validation bundle for NVLabs nvdiffrast.
+
+- [`diff-gaussian-rasterization-rocm72-gfx1201`](https://github.com/Painter3000/diff-gaussian-rasterization-rocm72-gfx1201)  
+  ROCm 7.2 / gfx1201 porting work for diff-gaussian-rasterization.
+
+- [`amd-gsplat-rocm72-gfx1201`](https://github.com/Painter3000/amd-gsplat-rocm72-gfx1201)  
+  AMD ROCm / gfx1201 porting work for gsplat-style Gaussian splatting workflows.
+
+- [`amd-gaussian-splatting-rocm72-gfx1201`](https://github.com/Painter3000/amd-gaussian-splatting-rocm72-gfx1201)  
+  AMD ROCm / RDNA4 porting work for Gaussian Splatting pipelines.
+
+---
+
+### Gaussian Splatting Dependencies
+
+- [`simple-knn-rocm72-gfx1201`](https://github.com/Painter3000/simple-knn-rocm72-gfx1201)  
+  ROCm / gfx1201 porting work for simple-knn.
+
+- [`fused-ssim-rocm72-gfx1201`](https://github.com/Painter3000/fused-ssim-rocm72-gfx1201)  
+  ROCm / gfx1201 porting work for fused-ssim.
+
+- [`amd-sugar-rocm72-gfx1201`](https://github.com/Painter3000/amd-sugar-rocm72-gfx1201)  
+  AMD ROCm / gfx1201 related porting work for SuGaR-style reconstruction workflows.
+
+---
+
+### Neural Graphics / Training Kernels
+
+- [`tiny-rdna4-nn`](https://github.com/Painter3000/tiny-rdna4-nn)  
+  RDNA4-focused tiny neural network / fused MLP kernel work for AMD gfx1201.
+
+---
+
+## Build Helpers and Wheels
+
+- [`pytorch3d-Wheel`](https://github.com/Painter3000/pytorch3d-Wheel)
+- [`nvdiffrast_wheel`](https://github.com/Painter3000/nvdiffrast_wheel)
+- [`torch_scatter_wheel`](https://github.com/Painter3000/torch_scatter_wheel)
+- [`xformers-wheel`](https://github.com/Painter3000/xformers-wheel)
+- [`xformers-wheel_cu130`](https://github.com/Painter3000/xformers-wheel_cu130)
+- [`kaolin_cu130_wheel`](https://github.com/Painter3000/kaolin_cu130_wheel)
+- [`gaussian-wheels`](https://github.com/Painter3000/gaussian-wheels)
+
+---
+
+## Runtime and Utility Projects
+
+- [`amd-gpu-torch-runtime-patch`](https://github.com/Painter3000/amd-gpu-torch-runtime-patch)  
+  Runtime patching / helper work for AMD GPU detection and PyTorch workflows.
+
+- [`torch-fade-logger`](https://github.com/Painter3000/torch-fade-logger)  
+  Utility project around PyTorch logging / diagnostics.
+
+- [`PIXIE-to-SMPL-X-Converter`](https://github.com/Painter3000/PIXIE-to-SMPL-X-Converter)  
+  Conversion helper work around PIXIE / SMPL-X workflows.
+
+---
+
+## Focus
+
+The goal of these repositories is practical AMD enablement:
+
+```text
+CUDA-centered 3D/AI project
+        ↓
+HIP / ROCm porting
+        ↓
+RDNA4 / gfx1201 validation
+        ↓
+reproducible install or patch bundle
+        ↓
+usable local AMD workflow
+```
+
+Most projects are community ports, validation bundles, wheel helpers, or experimental AMD compatibility layers.
