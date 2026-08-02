@@ -1,14 +1,16 @@
 # Painter3000 — AMD ROCm / RDNA4 Porting Work
 
-I work on practical AMD GPU enablement for 3D AI, differentiable rendering, Gaussian splatting, neural graphics, and reconstruction pipelines.
+I work on practical GPU enablement for 3D AI, differentiable rendering, Gaussian splatting, neural graphics, and reconstruction pipelines.
 
-Main target stack:
+My main AMD target stack:
 
 - AMD Radeon AI PRO R9700 / RDNA4 / gfx1201
 - ROCm 7.2
 - Python 3.12
 - PyTorch ROCm builds
 - Linux-based local AI / 3D workflows
+
+I also maintain several CUDA wheel helper repositories for newer NVIDIA / Blackwell-oriented environments where upstream wheels are missing or delayed.
 
 ---
 
@@ -50,7 +52,13 @@ Main target stack:
 
 ---
 
-## Build Helpers and Wheels
+## Wheel Helpers
+
+These repositories are primarily wheel/build helper repositories. The wheel projects are **not** the same as the ROCm/gfx1201 ports above.
+
+### CUDA / Blackwell Wheel Helpers
+
+These repositories target CUDA / Blackwell-era environments, including cases where prebuilt upstream wheels are unavailable or not yet aligned with newer CUDA/PyTorch stacks:
 
 - [`pytorch3d-Wheel`](https://github.com/Painter3000/pytorch3d-Wheel)
 - [`nvdiffrast_wheel`](https://github.com/Painter3000/nvdiffrast_wheel)
@@ -77,18 +85,18 @@ Main target stack:
 
 ## Focus
 
-The goal of these repositories is practical AMD enablement:
+The goal of these repositories is practical GPU enablement:
 
 ```text
-CUDA-centered 3D/AI project
+CUDA-centered or vendor-specific 3D/AI project
         ↓
-HIP / ROCm porting
+porting / build repair / validation
         ↓
-RDNA4 / gfx1201 validation
+AMD ROCm/RDNA4 or CUDA/Blackwell target stack
         ↓
-reproducible install or patch bundle
+reproducible install, wheel, or patch bundle
         ↓
-usable local AMD workflow
+usable local 3D AI workflow
 ```
 
-Most projects are community ports, validation bundles, wheel helpers, or experimental AMD compatibility layers.
+Most projects are community ports, validation bundles, wheel helpers, or experimental compatibility layers.
