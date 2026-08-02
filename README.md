@@ -1,4 +1,9 @@
-# Painter3000 — AMD ROCm / RDNA4 Porting Work
+<p align="center">
+  <img src="assets/painter3000_banner.png" alt="Painter3000 — GPU porting, digital art and code" width="100%">
+</p>
+
+
+# AMD ROCm/RDNA4 Ports + CUDA/Blackwell Wheel Helpers
 
 I work on practical GPU enablement for 3D AI, differentiable rendering, Gaussian splatting, neural graphics, and reconstruction pipelines.
 
