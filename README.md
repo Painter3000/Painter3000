@@ -52,6 +52,9 @@ I also maintain several CUDA wheel helper repositories for newer NVIDIA / Blackw
 
 ### Neural Graphics / Training Kernels
 
+* [`amd-nerfstudio-rocm72-gfx1201`](https://github.com/Painter3000/amd-nerfstudio-rocm72-gfx1201)
+  Qualified AMD ROCm 7.2 / RDNA4 / `gfx1201` integration for the Nerfacto training chain from Nerfstudio, using `tiny-rdna4-nn` and a ROCm-compatible `nerfacc` runtime.
+
 - [`tiny-rdna4-nn`](https://github.com/Painter3000/tiny-rdna4-nn)  
   RDNA4-focused tiny neural network / fused MLP kernel work for AMD gfx1201.
 
