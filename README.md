@@ -26,6 +26,9 @@ I also maintain several CUDA wheel helper repositories for newer NVIDIA / Blackw
 - [`amd-nvdiffrast-rocm72-gfx1201`](https://github.com/Painter3000/amd-nvdiffrast-rocm72-gfx1201)  
   AMD ROCm 7.2 / RDNA4 / gfx1201 patch and validation bundle for NVLabs nvdiffrast.
 
+- [`amd-2dgs-rocm72-gfx1201`](https://github.com/Painter3000/amd-2dgs-rocm72-gfx1201)  
+  Fresh-host qualified AMD ROCm 7.2 / RDNA4 `gfx1201` port and public installer for 2D Gaussian Splatting, verified on AMD Radeon AI PRO R9700.
+
 - [`diff-gaussian-rasterization-rocm72-gfx1201`](https://github.com/Painter3000/diff-gaussian-rasterization-rocm72-gfx1201)  
   ROCm 7.2 / gfx1201 porting work for diff-gaussian-rasterization.
 
